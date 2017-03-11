@@ -28,6 +28,7 @@ def activate(weights, inputs):
 
 
 def transfer(activation):
+    # Sigmoid
     return 1.0 / (1.0 + exp(-activation))
 
 
