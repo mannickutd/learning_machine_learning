@@ -1,8 +1,9 @@
 #!/usr/bin/env python
+import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from feed_forward import (initialize_network, train_network, predict)
+from numpy_feed_forward import (initialize_network, train_network, predict)
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import torch
 import torch.nn as nn
+import numpy as np
 import torch.nn.functional as F
 import torch.optim as onn
 import torch.nn.functional as fnn
@@ -44,6 +45,6 @@ def train_network(network, train, test, l_rate, n_epoch, n_outputs):
 
 def predict(network, x):
     network.eval()
-    input_tensor = ann.Variable(torch.Tensor(x))
+    input_tensor = ann.Variable(torch.Tensor([x]))
     output = network.forward(input_tensor)
-    return output.data.exp().numpy()
+    return np.argmax(output.data.numpy())
