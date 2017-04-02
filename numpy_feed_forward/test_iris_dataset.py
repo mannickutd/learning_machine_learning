@@ -16,8 +16,8 @@ if __name__ == '__main__':
     _, n_inputs = x_train.shape
     n_outputs = len(set([x for x in iris.target]))
     # Train parameters
-    l_rate = 0.5
-    n_epochs = 1
+    l_rate = 0.05
+    n_epochs = 100
     n_hidden = 6
     network = initialize_network(n_inputs, n_hidden, n_outputs)
     train_network(network, x_train, y_train, l_rate, n_epochs, n_outputs)
